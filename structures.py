@@ -926,7 +926,7 @@ def make_info_box(df, harmony_link=None):
         row = html.Div([
             # First column
             html.Div([
-                html.B("Harmonise this scale")
+                html.B("Harmonise this dataset")
             ], className = "info_box_left"),
 
             # Second column
