@@ -926,13 +926,22 @@ def make_info_box(df, harmony_link=None):
         row = html.Div([
             # First column
             html.Div([
-                html.B("Harmonise this data")
+                html.B("Harmonise this scale")
             ], className = "info_box_left"),
 
             # Second column
             html.Div([
-                html.A("Import into Harmony", href=harmony_link, target="harmony")
-            ], className = "info_box_right")
+                html.A([html.Img(src="/assets/logos/harmony.svg", alt="Harmony", width=40, height=40,
+                                 style={"height": "35px", "width": "35px", "padding-top": "0px",
+                                        "padding-bottom": "0px", "padding-left": "0px", "padding-right": "0px",
+                                        "margin-top": "0px", "margin-bottom": "0px", "margin-left": "0px",
+                                        "margin-right": "0px", "border-top": "0px", "border-bottom": "0px",
+                                        "border-left": "0px", "border-right": "0px", "border": "0px",
+                                        "box-sizing": "0px"})], href=harmony_link, target="harmony",
+                       style={"vertical-align": "top", "margin-top": "0px"}),
+                html.A([html.Span("Import into Harmony", style={"vertical-align": "top", "margin-top": "0px"})],
+                       href=harmony_link, target="harmony", style={"vertical-align": "top", "margin-top": "0px"})
+            ], className = "info_box_right", style={"vertical-align": "top", "margin-top":"0px"})
         ])
         [{'id': x, 'name': x, 'presentation': 'markdown'} if x == 'Link(s)' else {'id': x, 'name': x} for x in df.columns],
         out_text.append(row)
