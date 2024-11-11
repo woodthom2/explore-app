@@ -931,14 +931,14 @@ def make_info_box(df, harmony_link=None):
 
             # Second column
             html.Div([
-                html.A([html.Img(src="/assets/logos/harmony.svg", alt="Harmony", width=40, height=40,
-                                 style={"height": "35px", "width": "35px", "padding-top": "0px",
+                html.A([html.Img(src="/assets/logos/harmony.svg", alt="Harmony", width="1.2em", height="1.287em",
+                                 style={"height": "1.2em", "width": "1.287em", "padding-top": "0px",
                                         "padding-bottom": "0px", "padding-left": "0px", "padding-right": "0px",
                                         "margin-top": "0px", "margin-bottom": "0px", "margin-left": "0px",
                                         "margin-right": "0px", "border-top": "0px", "border-bottom": "0px",
                                         "border-left": "0px", "border-right": "0px", "border": "0px",
-                                        "box-sizing": "0px"})], href=harmony_link, target="harmony",
-                       style={"vertical-align": "top", "margin-top": "0px"}),
+                                        "box-sizing": "0px"}), " "], href=harmony_link, target="harmony",
+                       style={"vertical-align": "top", "margin-top": "0px", "text-decoration": "none"}),
                 html.A([html.Span("Import into Harmony", style={"vertical-align": "top", "margin-top": "0px"})],
                        href=harmony_link, target="harmony", style={"vertical-align": "top", "margin-top": "0px"})
             ], className = "info_box_right", style={"vertical-align": "top", "margin-top":"0px"})
